@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아원팜 종합 경영분석 리포트 2025</title>
+
+    <!-- ✅ 로컬 assets 폴더 경로 수정 -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ✅ Chart.js 로컬 파일 사용 -->
+    <script src="assets/chart.umd.min.js"></script>
+
+    <!-- Font Awesome (CDN 그대로 유지) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-seedling"></i>
+                <span>아원팜 경영분석 리포트</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#executive">요약</a></li>
+                <li><a href="#timeline">시계열</a></li>
+                <li><a href="#lifecycle">생육주기</a></li>
+                <li><a href="#risks">리스크</a></li>
+                <li><a href="#evaluation">평가</a></li>
+                <li><a href="#roadmap">개선안</a></li>
+            </ul>
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i> 인쇄
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">아원팜 종합 경영분석 리포트</h1>
+                <p class="hero-subtitle">2025년 영농 데이터 ROI 분석 및 리스크 관리</p>
+                <div class="hero-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 분석 기간: 2025.02.27 ~ 2025.10.23</span>
+                    <span><i class="fas fa-leaf"></i> 주요 작물: 대추방울토마토</span>
+                    <span><i class="fas fa-warehouse"></i> 재배 규모: 6개동</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section id="executive" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Executive Summary
+            </h2>
+
+            <!-- 주요 카드 -->
+            <div class="metrics-grid">
+                <div class="metric-card highlight">
+                    <div class="metric-icon">
+                        <i class="fas fa-won-sign"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-label">총 수익</span>
+                        <span class="metric-value">108,730,900원</span>
+                        <span class="metric-detail">8,349 box 출하</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-label">순이익</span>
+                        <span class="metric-value">101,147,300원</span>
+                        <span class="metric-detail">영업이익률 93.0%</span>
+                    </div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-label">ROI</span>
+                        <span class="metric-value">1,333.8%</span>
+                        <span class="metric-detail">최상위권</span>
+                    </div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-label">종합 평가</span>
+                        <span class="metric-value">79.5점</span>
+                        <span class="metric-detail">C+ 등급 / 100점 만점</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 강점/과제 카드 -->
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3><i class="fas fa-thumbs-up"></i> 주요 강점</h3>
+                    <ul class="strength-list">
+                        <li><span class="badge success">탁월</span> ROI 1,333.8% - 업계 최상위권</li>
+                        <li><span class="badge success">우수</span> 영업이익률 93.0%</li>
+                        <li><span class="badge success">효율적</span> 비용효율 89.5점</li>
+                        <li><span class="badge info">안정</span> 평균 단가 13,321원</li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 핵심 과제</h3>
+                    <ul class="challenge-list">
+                        <li><span class="badge danger">최우선</span> 병해충 관리</li>
+                        <li><span class="badge warning">중요</span> 출하 안정성 (출하율 40.2%)</li>
+                        <li><span class="badge warning">중요</span> 가격 변동성 (CV 95.3%)</li>
+                        <li><span class="badge info">개선</span> 거래처 다변화</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i>
+                시계열 분석
+            </h2>
+
+            <div class="chart-container">
+                <h3 class="chart-title">월별 출하 금액 및 수량 추이</h3>
+                <canvas id="monthlyOutputChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ 로컬 스크립트 경로 수정 -->
+    <script src="assets/charts.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+</html>
